@@ -1,0 +1,16 @@
+header.navbar{
+    background-color: rgb(226, 226, 226);
+}
+
+.nombreTienda{
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+li{
+    margin: 0.5rem;
+    cursor: pointer;
+}
+li:hover{
+    color: rgb(133, 128, 128);
+}
