@@ -1,13 +1,17 @@
 import  './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const navbar = () => {
   return (
    
-      <header className="navbar navbar-expand-lg  ">
+      <header className="navbar navbar-expand-md  ">
         <div className="container-fluid">
-          <h1 className='nombreTienda'>Rugby Pro Shop</h1>
+          <Link to={"/"} className='logolink'>
+          <img src="../../../public/image/logo.png" alt="proshop rugby" className='logonavbar' />
+          </Link>
+          
           <button
             className="navbar-toggler"
             type="button"
@@ -21,22 +25,32 @@ const navbar = () => {
           </button>
           <nav className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
+                <li className="nav-item">                
+                     
+                     <NavLink to={`/`}> Home</NavLink>             
+                 </li>
+
               <li className="nav-item">                
-                  Home                
+                     
+                  <NavLink to={`/categoria/5`}> Accesorios</NavLink>             
               </li>
               <li className="nav-item">                
-                  Nosotros                
+                    
+                  <NavLink to={`/categoria/7`}> Proteccion</NavLink>                  
               </li>
               <li className="nav-item">               
-                  Productos               
+                  <NavLink to={`/categoria/3`}> Moda</NavLink>            
               </li>   
               <li className="nav-item">               
-                  Estemos en Contacto               
+                            
+                  <NavLink to={`/categoria/2`}> Guindas</NavLink>     
               </li>          
-            </ul>        
+            </ul>  
+                   <CartWidget />   
           </nav>
-          <CartWidget /> 
-        </div>               
+          
+        </div>  
+              
       </header>
   
   );
